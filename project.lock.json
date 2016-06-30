@@ -7581,7 +7581,7 @@
       "xunit >= 2.1.0"
     ],
     ".NETCoreApp,Version=v1.0": [
-      "Microsoft.NETCore.App >= 1.0.0-rc3-004408"
+      "Microsoft.NETCore.App >= 1.0.0"
     ]
   },
   "tools": {},
