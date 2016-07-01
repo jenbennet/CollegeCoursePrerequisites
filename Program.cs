@@ -6,10 +6,18 @@ namespace CollegeCoursePrerequisites
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            InputFile inputFile = new InputFile("/Users/Jen/Documents/Code/Packsize/CollegeCoursePrerequisites/TestFiles/input.txt");
+            //InputFile inputFile = new InputFile("/Users/Jen/Documents/Code/Packsize/CollegeCoursePrerequisites/TestFiles/circular-input-file.txt");
+            InputFile inputFile = new InputFile(args[0]);
             inputFile.readFile();
 
+            CollegeCatalogue catalogue = new CollegeCatalogue();
+            if ( catalogue.loadCourseCatalogue(inputFile.InputArray) )
+            {
+                catalogue.printCatalogue();
+            }
+            else {
+                Console.WriteLine("Unable to create a Course Catalogue: There was a circular reference in the input file.");
+            }
         }
     }
 }
