@@ -12,7 +12,7 @@ namespace CollegeCoursePrerequisites
 
         public  Dictionary<string, List<string>> CourseCatalogue { get; private set; }
 
-        public bool loadCourseCatalogue(string[] courseArray)
+        public bool LoadCourseCatalogue(string[] courseArray)
         {
             foreach(string item in courseArray)
             {
@@ -116,7 +116,7 @@ namespace CollegeCoursePrerequisites
             return "";
         }
 
-        public void printCatalogue() 
+        public void PrintCatalogue() 
         {
             string output = String.Join(", ", CourseCatalogue.Keys);
 

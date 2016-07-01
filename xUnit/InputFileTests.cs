@@ -12,7 +12,7 @@ public class InputFileShould
         InputFile inputFile = new InputFile(path);
 
         //Act
-        Exception e = Assert.Throws<ArgumentException>(() => { inputFile.readFile(); });
+        Exception e = Assert.Throws<ArgumentException>(() => { inputFile.ReadFile(); });
 
         //Assert
         Assert.Equal("The file was not found", e.Message);
@@ -26,7 +26,7 @@ public class InputFileShould
         InputFile inputFile = new InputFile(path);
 
         //Act
-        Exception e = Assert.Throws<FileNotFoundException>(() => { inputFile.readFile(); });
+        Exception e = Assert.Throws<FileNotFoundException>(() => { inputFile.ReadFile(); });
 
         //Assert
         Assert.Equal("The file was not found", e.Message);
@@ -42,7 +42,7 @@ public class InputFileShould
         InputFile inputFile = new InputFile(path);
 
         //Act
-        inputFile.readFile();
+        inputFile.ReadFile();
 
         //Assert
         Assert.Equal(expected, inputFile.InputArray);

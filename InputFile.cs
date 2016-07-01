@@ -13,7 +13,7 @@ namespace CollegeCoursePrerequisites
         public string Path { get; }
         public string[] InputArray { get; private set;}
 
-        public void readFile()
+        public void ReadFile()
         {
             try 
             {
@@ -34,7 +34,7 @@ namespace CollegeCoursePrerequisites
             }
         }
 
-        public void printFile() 
+        public void PrintFile() 
         {
             foreach (string line in InputArray)
             {
